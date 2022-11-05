@@ -1,10 +1,10 @@
 <nav>
     <div class="topnav">
-        <a href="Index.html">Főoldal</a>
+        <a href="Index.php">Főoldal</a>
         <a href="Profile.php">Profil</a>
 
 
-        
+
         <a href="Registration.php">Regisztráció</a>
 
 
