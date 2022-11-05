@@ -1,26 +1,19 @@
-/*Color palette:
--a szövegekhez -> #E2E6E0
--a kijelölt dolgokhoz -> #84A98C
--az alap dolgokhoz -> #354F52
--az általános hátterekhez -> #52796F
--az oldal hátteréhez -> #2F3E46
-*/
 /*-------------------------- Add a STYLE to the FULLPAGE ------------------------------------------*/
 html,body,head,header,footer{
     font-family: Tahoma, Verdana, sans-serif;
-    background-color: #2F3E46;
+    background-color: #161a1d;
 }
 /*-------------------------- Add a STYLE to the TOP navigation ------------------------------------------*/
 .topnav {
     border-radius: 8px;
-    background-color: #354F52;
+    background-color: #Ba181b;
     overflow: hidden;
   }
   
   /* Style the links inside the navigation bar */
   .topnav a {
     float: left;
-    color: #e2e6e0;
+    color: #ffffff;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -30,15 +23,15 @@ html,body,head,header,footer{
   
   /* Change the color of links on hover */
   .topnav a:hover {
-    background-color:#84A98C;
-    color:#354F52;
+    background-color:#212529;
+    color:#ffffff;
     transition-duration: 0.6s;
   }
   
   /* Add a color to the active/current link */
   .topnav a.active {
-    background-color:  #84A98C;
-    color: #354F52;
+    background-color:  #212529;
+    color: #ffffff;
   }
 
   .kijelentkezes{
@@ -66,14 +59,13 @@ html,body,head,header,footer{
   }
   /*-------------------------- Add a STYLE to the FORM ------------------------------------------*/
   ::placeholder{
-    color:#e2e6e0;
+    color:#ffffff;
   }
   input[type=text]{
     border-radius: 8px;
     text-align: center;
     background-color: #354F52;
     color: #e2e6e0;
-    transition: width 0.4s ease-in-out;
     text-decoration: none;
     border: none;
     width: 30%;
@@ -91,7 +83,6 @@ input[type=password]{
   text-align: center;
   background-color: #354F52;
   color: #e2e6e0;
-  transition: width 0.4s ease-in-out;
   text-decoration: none;
   border: none;
   width: 30%;
@@ -120,10 +111,9 @@ input[type=password]:focus {
 }
   input[type=button]{
     border-radius: 8px;
-    transition: width 0.6s ease-in-out;
     text-align: center;
-    background-color: #354F52;
-    color: #e2e6e0;
+    background-color: #212529;
+    color: #ffffff;
     text-decoration: none;
     border: none;
     width: 20%;
@@ -133,7 +123,6 @@ input[type=password]:focus {
     float: right;
 }
 input[type=button]:hover{
-    transition: width 0.6s ease-in-out;
     text-align: center;
     background-color: #84A98C;
     color: #354F52;
@@ -145,10 +134,9 @@ input[type=button]:hover{
 }
 button{
   border-radius: 8px;
-  transition: width 0.6s ease-in-out;
   text-align: center;
-  background-color: #354F52;
-  color: #e2e6e0;
+  background-color: #727070;
+  color: #ffffff;
   text-decoration: none;
   border: none;
   width: 20%;
@@ -158,13 +146,12 @@ button{
   float: right;
 }
 button:hover{
-  transition: width 0.6s ease-in-out;
   text-align: center;
-  background-color: #84A98C;
-  color: #354F52;
+  background-color: #615f5f;
+  color: #ffffff;
   text-decoration: none;
   border: none;
-  width: 23%;
+  width: 20%;
   float: right;
   min-width: fit-content;
 }
