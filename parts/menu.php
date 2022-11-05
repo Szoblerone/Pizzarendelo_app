@@ -2,7 +2,14 @@
     <div class="topnav">
         <a href="Index.html">Főoldal</a>
         <a href="Profile.php">Profil</a>
+
+
+        
         <a href="Registration.php">Regisztráció</a>
+
+
+
+
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
            <!-- Button to open the modal login form -->
             <button onclick="document.getElementById('id01').style.display='block'">Bejelentkezés</button>

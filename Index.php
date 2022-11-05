@@ -7,10 +7,44 @@
 
 <div id="content">
 
-    <div class="termek">
-        <img src="ProductPics/BMWi4.jpg">
-        <p class="nev" data-text="Mindent Bele">BMW VALAMI Kocsi XD</p>
+    <div class="product">
+        <img src="images/magyarospizza.jpg">
+        <p class="nev" data-text="Mindent Bele">Margaréta</p>
         <span class="leiras">-paradicsom szósz, papras dsad as df asika, oliva bogyó,  sajt ,pepperoni</span>
+        <br>
+        <div class="price">1990 Ft</div>
+        <button class="more">Kosárba</button>
+    </div>
+
+    <div class="product">
+        <img src="images/magyarospizza.jpg">
+        <p class="nev" data-text="Mindent Bele">Sonkás</p>
+        <span class="leiras">-paradicsom szósz, papras dsad as df asika, oliva bogyó,  sajt ,pepperoni</span>
+        <div class="price">1990 Ft</div>
+        <button class="more">Kosárba</button>
+    </div>
+
+    <div class="product">
+        <img src="images/magyarospizza.jpg">
+        <p class="nev" data-text="Mindent Bele">4 évszak</p>
+        <span class="leiras">-paradicsom szósz, papras dsad as df asika, oliva bogyó,  sajt ,pepperoni</span>
+        <div class="price">1990 Ft</div>
+        <button class="more">Kosárba</button>
+    </div>
+
+    <div class="product">
+        <img src="images/magyarospizza.jpg">
+        <p class="nev" data-text="Mindent Bele">Húsimádó</p>
+        <span class="leiras">-paradicsom szósz, papras dsad as df asika, oliva bogyó,  sajt ,pepperoni</span>
+        <div class="price">1990 Ft</div>
+        <button class="more">Kosárba</button>
+    </div>
+
+    <div class="product">
+        <img src="images/magyarospizza.jpg">
+        <p class="nev" data-text="Mindent Bele">4 sajtos</p>
+        <span class="leiras">-paradicsom szósz, papras dsad as df asika, oliva bogyó,  sajt ,pepperoni</span>
+        
         <div class="price">1990 Ft</div>
         <button class="more">Kosárba</button>
     </div>
