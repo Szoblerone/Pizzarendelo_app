@@ -1,4 +1,5 @@
 <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $usernamedata=trim($_POST["username"]);
     $passworddata=trim($_POST["password"]);
     if (empty($usernamedata)) {
@@ -29,7 +30,7 @@
             $queryKeres->bindColumn("street",$street);
             $queryKeres->bindColumn("phone",$phone);
             while ($row = $queryKeres->fetch(PDO::FETCH_BOUND)){	// a változókba olvassuk ki az eredményt soronként
-            echo $username.$email.$firstname.$lastname.$gender.$birthdate.$zipcode.$city.$street.$phone;
+            echo "Üdvözöljük kedves ".$firstname." ".$lastname."!";
             }
         }else {
             echo "<p>Hibás a felhasználónév vagy jelszó!</p>\n";
@@ -41,4 +42,5 @@
     catch (Exception $e){
         echo "<p class='error'>Hiba: ".$e->getMessage()."</p>\n";
     }
+}
 ?>

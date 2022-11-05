@@ -25,13 +25,12 @@
 
                 <div class="container" style="background-color: #Ba181b;">
                 
-                <input type="text" placeholder="Felhasználónév" name="uname" required><br>
+                <input type="text" name="username" placeholder="Felhasználónév" required><br>
+                <input type="password" name="password" placeholder="Jelszó" required>
 
-                
-                <input type="password" placeholder="Jelszó" name="psw" required>
                 <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Mégse</button>
 
-                <button type="submit">Bejelentkezés</button>
+                <button type="submit" name="user">Bejelentkezés</button>
 
                 
                
@@ -44,6 +43,6 @@
             </form>
             </div>
         </form>
-        
+      <?php require("DatabaseParts/User_login_verification.php");?>  
     </div>
 </nav>
