@@ -7,6 +7,7 @@
 <meta charset="utf-8">
 <script src=""></script>
 <link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="images/pizzaicon.png">
 <script src="search-bar.js" defer></script>
 </head>
 <body>
