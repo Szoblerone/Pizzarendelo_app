@@ -16,7 +16,7 @@
             <form class="modal-content animate" action="/action_page.php">
                 
 
-                <div class="container" style="background-color: #00b6a1;">
+                <div class="container" style="background-color: #Ba181b;">
                 
                 <input type="text" placeholder="Felhasználónév" name="uname" required><br>
 
