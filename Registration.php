@@ -122,6 +122,44 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $phone=$phonedata;
     require("DatabaseParts/Userdata_server_connect.php");
     try {
+        $sql = "SELECT username FROM users WHERE username=:username";	// paraméterezett lekérdezés
+        $queryKeres = $conn->prepare($sql);		// előkészített lekérdezés létrehozása
+        $queryKeres->bindParam(":username",$username,PDO::PARAM_STR);	// paraméterhez érték kötése
+        $queryKeres->execute();					// lekérdezés lefuttatása
+        if ($queryKeres->rowCount()>=1){		// ha legalább egy soros az eredmény (talált ilyen terméket)
+            $queryKeres->bindColumn("username",$username);	// az eredmény értékeihez változókat kötünk
+            while ($row = $queryKeres->fetch(PDO::FETCH_BOUND)){	// a változókba olvassuk ki az eredményt soronként
+            echo "A felhasználónév már foglalt!";
+            die();
+            }
+    }
+    }
+    catch (PDOException $e){
+        echo "<p class='error'>Adatbázis lekérdezési hiba: ".$e->getMessage()."</p>\n";
+    }
+    catch (Exception $e){
+        echo "<p class='error'>Hiba: ".$e->getMessage()."</p>\n";
+    }
+    try {
+        $sql = "SELECT email FROM users WHERE email=:email";	// paraméterezett lekérdezés
+        $queryKeres = $conn->prepare($sql);		// előkészített lekérdezés létrehozása
+        $queryKeres->bindParam(":email",$email,PDO::PARAM_STR);	// paraméterhez érték kötése
+        $queryKeres->execute();					// lekérdezés lefuttatása
+        if ($queryKeres->rowCount()>=1){		// ha legalább egy soros az eredmény (talált ilyen terméket)
+            $queryKeres->bindColumn("email",$email);	// az eredmény értékeihez változókat kötünk
+            while ($row = $queryKeres->fetch(PDO::FETCH_BOUND)){	// a változókba olvassuk ki az eredményt soronként
+            echo "Az email cím már foglalt!";
+            die();
+            }
+    }
+    }
+    catch (PDOException $e){
+        echo "<p class='error'>Adatbázis lekérdezési hiba: ".$e->getMessage()."</p>\n";
+    }
+    catch (Exception $e){
+        echo "<p class='error'>Hiba: ".$e->getMessage()."</p>\n";
+    }
+    try {
 			$sql = "INSERT INTO users (username,password,email,firstname,lastname,gender,birthdate,zipcode,city,street,phone)
             VALUES (:username,:password,:email,:firstname,:lastname,:gender,:birthdate,:zipcode,:city,:street,:phone) ";	// paraméterezett lekérdezés
 			$queryMent = $conn->prepare($sql);							// előkészített lekérdezés létrehozása
