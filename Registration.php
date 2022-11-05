@@ -13,7 +13,8 @@
         <input type="radio" name="gender" value="other">egyéb<br>
 
         <input type="date" name="birthdate" id="birthdate"><br><br>
-        <input type="number" name="zipcode" id="zipcode" placeholder="irányítószám"><br>
+        <label for="zipcode">irányítószám</label>
+        <input type="number" name="zipcode" id="zipcode"><br>
         <input type="text" name="city" id="city" placeholder="város"><br>
         <input type="text" name="street" id="street" placeholder="utca és házszám"><br>
         <input type="tel" name="phone" id="phone" placeholder="telefonszám"><br>
