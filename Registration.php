@@ -1,5 +1,6 @@
 <?php $pagename="Regisztráció"; ?>
 <?php require_once("parts/htmlTop.php");?>
+<?php require_once("parts/menu.php");?>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
         <input type="text" name="username" id="username" placeholder="felhasználónév"><br>
         <input type="password" name="password" id="password" placeholder="jelszó"><br>
