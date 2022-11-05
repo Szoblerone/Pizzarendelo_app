@@ -1,4 +1,6 @@
-<?php $pagename="Főoldal";?>
+<?php 
+session_start();
+$pagename="Főoldal";?>
 <?php require_once("parts/htmlTop.php");?>
 <?php require_once("parts/menu.php");?>
 

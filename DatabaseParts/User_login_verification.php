@@ -31,6 +31,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             $queryKeres->bindColumn("phone",$phone);
             while ($row = $queryKeres->fetch(PDO::FETCH_BOUND)){	// a változókba olvassuk ki az eredményt soronként
             echo "Üdvözöljük kedves ".$firstname." ".$lastname."!";
+            $_SESSION["username"] = $username;
+            $_SESSION["email"] = $email;
+            $_SESSION["firstname"] = $firstname;
+            $_SESSION["lastname"] = $lastname;
+            $_SESSION["gender"] = $gender;
+            $_SESSION["birthdate"] = $birthdate;
+            $_SESSION["zipcode"] = $zipcode;
+            $_SESSION["city"] = $city;
+            $_SESSION["street"] = $street;
+            $_SESSION["phone"] = $phone;
             }
         }else {
             echo "<p>Hibás a felhasználónév vagy jelszó!</p>\n";

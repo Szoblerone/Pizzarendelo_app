@@ -7,7 +7,10 @@
 
         <a href="Registration.php">Regisztráció</a>
 
-
+        <?php 
+        if (isset($_SESSION["lastname"])) {
+            echo $_SESSION["lastname"];
+        }?>
 
 
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">

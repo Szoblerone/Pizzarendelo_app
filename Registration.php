@@ -1,4 +1,6 @@
-<?php $pagename="Regisztráció"; ?>
+<?php 
+session_start();
+$pagename="Regisztráció"; ?>
 <?php require_once("parts/htmlTop.php");?>
 <?php require_once("parts/menu.php");?>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
@@ -177,6 +179,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             $queryMent->bindParam(":phone",$phone,PDO::PARAM_STR);			// paraméterekhez érték rendelése
 			$queryMent->execute();										// lekérdezés lefuttatása
             echo "Új felhasználó hozzá adva!";
+            session_start();
+            $_SESSION["username"] = $username;
+            $_SESSION["email"] = $email;
+            $_SESSION["firstname"] = $firstname;
+            $_SESSION["lastname"] = $lastname;
+            $_SESSION["gender"] = $gender;
+            $_SESSION["birthdate"] = $birthdate;
+            $_SESSION["zipcode"] = $zipcode;
+            $_SESSION["city"] = $city;
+            $_SESSION["street"] = $street;
+            $_SESSION["phone"] = $phone;
 		}
 		catch (PDOException $e){
 			echo "<p class='error'>Adatbázis mentési hiba: ".$e->getMessage()."</p>\n";
