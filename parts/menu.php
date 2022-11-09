@@ -1,16 +1,16 @@
 <nav>
     <div class="topnav">
         <a href="Index.php">Főoldal</a>
-        <a href="Profile.php">Profil</a>
-
-
-
+        <?php 
+        if(isset($_SESSION["lastname"])){
+            echo "<a href=Profile.php>Profil</a>";
+        }?>
         <a href="Registration.php">Regisztráció</a>
-
         <?php 
         if (isset($_SESSION["lastname"])) {
             echo $_SESSION["lastname"];
-        }?>
+        }
+        ?>
 
 
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
