@@ -1,17 +1,32 @@
 <?php
-require("DatabaseParts/Userdata_server_connection.php");
-?>
-<div class="product">
+require("DatabaseParts/Userdata_server_connect.php");
+/*<div class="product">
         <img src="images/magyarospizza.jpg">
         <p class="nev" data-text="Mindent Bele">Margaréta</p>
         <span class="leiras">-paradicsom szósz, papras dsad as df asika, oliva bogyó,  sajt ,pepperoni</span>
         <br>
         <div class="price">1990 Ft</div>
         <button class="more">Kosárba</button>
-</div>
-
-
-<?php
-
-
+</div>*/
+    try {
+        $sql = "SELECT pizzaname, description, price, image  FROM pizza";		// eszerű lekérdezés
+        $queryLeker = $conn->prepare($sql);					// előkészített lekérdezés létrehozása
+        $queryLeker->execute();								// lekérdezés lefuttatása
+        while ($row = $queryLeker->fetch(PDO::FETCH_ASSOC)){	// asszociatív tömbbe olvassuk ki a lekérdezés eredményét soronként
+        echo "<div class=product>";
+        echo "<img src=".$row["image"].">";
+        echo "<p class=nev data-text=Mindent Bele>".$row["pizzaname"]."</p>";
+        echo "<span class=leiras>".$row["description"]."</span>";
+        echo "<br>";
+        echo "<div class=price>".$row["price"]." Ft</div>";
+        echo "<button class=more>Kosárba</button>";
+        echo "</div>";
+        }
+    }
+    catch (PDOException $e){
+        echo "<p class='error'>Adatbázis lekérdezési hiba: ".$e->getMessage()."</p>\n";
+    }
+    catch (Exception $e){
+        echo "<p class='error'>Hiba: ".$e->getMessage()."</p>\n";
+    }
 ?>
