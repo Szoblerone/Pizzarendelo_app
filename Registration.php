@@ -179,7 +179,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             $queryMent->bindParam(":phone",$phone,PDO::PARAM_STR);			// paraméterekhez érték rendelése
 			$queryMent->execute();										// lekérdezés lefuttatása
             echo "Új felhasználó hozzá adva!";
-            session_start();
             $_SESSION["username"] = $username;
             $_SESSION["email"] = $email;
             $_SESSION["firstname"] = $firstname;
