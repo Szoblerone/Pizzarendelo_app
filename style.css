@@ -2,6 +2,7 @@
 html,body,head,header,footer{
     font-family: Tahoma, Verdana, sans-serif;
     background-color: #fefefe;
+    /*majd ha kész ilyen színű legyen :#343a40*/
 }
 /*-------------------------- Add a STYLE to the TOP navigation ------------------------------------------*/
 .topnav {
@@ -399,3 +400,13 @@ a{
   margin: 0px;
   border-radius: 0px;
 }
+
+
+
+/*-------------------------------Style for cart items-------------------------------------------------------*/
+
+#cart-table th{
+  padding-left: 50;
+}
+
+
