@@ -2,6 +2,7 @@
 html,body,head,header,footer{
     font-family: Tahoma, Verdana, sans-serif;
     background-color: #fefefe;
+    text-align: center;
 }
 /*-------------------------- Add a STYLE to the TOP navigation ------------------------------------------*/
 .topnav {
@@ -74,6 +75,25 @@ html,body,head,header,footer{
     margin-bottom: 25px;
     min-width: fit-content;
 }
+input[type=submit]{
+  border-radius: 8px;
+  text-align: center;
+  background-color: #343434;
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  width: 30%;
+  padding: 10px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  min-width: fit-content;
+}
+input[type=submit]:focus {
+  background-color: #615f5f;
+}
+input[type=submit]:hover {
+  background-color: #615f5f;
+}
 input[type=date]{
   border-radius: 8px;
   text-align: center;
@@ -126,7 +146,7 @@ input[type=password]{
 input[type=password]:focus {
   background-color: #615f5f;
 }
-.phone{
+input[type=tel]{
   border-radius: 8px;
   text-align: center;
   background-color: #727070;
@@ -139,7 +159,23 @@ input[type=password]:focus {
   margin-bottom: 25px;
   min-width: fit-content;
 }
-.phone:focus {
+input[type=tel]:focus {
+  background-color: #615f5f;
+}
+input[type=email]{
+  border-radius: 8px;
+  text-align: center;
+  background-color: #727070;
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  width: 30%;
+  padding: 10px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  min-width: fit-content;
+}
+input[type=email]:focus {
   background-color: #615f5f;
 }
 
@@ -414,4 +450,9 @@ a{
   padding: 0px;
   margin: 0px;
   border-radius: 0px;
+}
+.registration-form{
+  max-width: 64em;
+  margin: auto;
+  text-align: center;
 }
