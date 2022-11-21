@@ -3,7 +3,8 @@ session_start();
 $pagename="Regisztráció"; ?>
 <?php require_once("parts/htmlTop.php");?>
 <?php require_once("parts/menu.php");?>
-<form class="registration-form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+<div class="registration-form">
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
         <input type="text" name="username" id="username" placeholder="felhasználónév"><br>
         <input type="password" name="password" id="password" placeholder="jelszó">
         <input type="password" name="passwordre" id="passwordre" placeholder="jelszó mégegyszer"><br>
@@ -22,7 +23,7 @@ $pagename="Regisztráció"; ?>
         <input type="tel" name="phone" id="phone" placeholder="telefonszám"><br>
 
         <input type="submit" value="Elküld" name="newuser">
-    </form>
+    </form></div>
 <?php 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
@@ -179,6 +180,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 			$queryMent->execute();										// lekérdezés lefuttatása
             echo "Új felhasználó hozzá adva!";
             $_SESSION["username"] = $username;
+            $_SESSION["password"] = $password;
             $_SESSION["email"] = $email;
             $_SESSION["firstname"] = $firstname;
             $_SESSION["lastname"] = $lastname;
