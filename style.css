@@ -126,6 +126,22 @@ input[type=password]{
 input[type=password]:focus {
   background-color: #615f5f;
 }
+.phone{
+  border-radius: 8px;
+  text-align: center;
+  background-color: #727070;
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  width: 30%;
+  padding: 10px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  min-width: fit-content;
+}
+.phone:focus {
+  background-color: #615f5f;
+}
 
   input[type=file]{
     border-radius: 8px;

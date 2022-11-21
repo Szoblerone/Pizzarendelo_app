@@ -3,6 +3,7 @@ session_start();
 $pagename="Regisztráció"; ?>
 <?php require_once("parts/htmlTop.php");?>
 <?php require_once("parts/menu.php");?>
+<div class="form-center">
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
         <input type="text" name="username" id="username" placeholder="felhasználónév"><br>
         <input type="password" name="password" id="password" placeholder="jelszó"><br>
@@ -16,14 +17,14 @@ $pagename="Regisztráció"; ?>
         <input type="radio" name="gender" value="other">egyéb<br>
 
         <input type="date" name="birthdate" id="birthdate"><br><br>
-        <label for="zipcode">irányítószám</label>
-        <input type="number" name="zipcode" id="zipcode"><br>
+        <input type="number" name="zipcode" id="zipcode" placeholder="irányítószám"><br>
         <input type="text" name="city" id="city" placeholder="város"><br>
         <input type="text" name="street" id="street" placeholder="utca és házszám"><br>
-        <input type="tel" name="phone" id="phone" placeholder="telefonszám"><br>
+        <input type="tel" name="phone" id="phone" class="phone" placeholder="telefonszám"><br>
 
         <input type="submit" value="Elküld" name="newuser"><br>
     </form>
+</div>
 <?php 
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
