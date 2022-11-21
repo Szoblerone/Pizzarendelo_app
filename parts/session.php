@@ -10,30 +10,25 @@ if(isset($_SESSION["username"])){
     <?php
 }else{
    ?> 
-   <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-    <!-- Button to open the modal login form -->
-     <button onclick="document.getElementById('id01').style.display='block'">Bejelentkezés</button>
-    
-     <!-- The Modal -->
-     <div id="id01" class="modal">
-     <span onclick="document.getElementById('id01').style.display='none'"
-     class="close" title="Close Modal">&times;</span>
-    
-     <!-- Modal Content -->
-     <form class="modal-content animate" action="/action_page.php">
-         
-    
+     <button data-modal-target="#modal">Bejelentkezés</button>
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <div class="title">Bejelentkezés</div>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+    <form class="modal-content animate" action="/action_page.php">
          <div class="container" style="background-color: #Ba181b;">
-         
          <input type="text" name="username" placeholder="Felhasználónév" required><br>
          <input type="password" name="password" placeholder="Jelszó" required>
-    
-         <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Mégse</button>
-             <button type="submit" name="user">Bejelentkezés</button>
+        <button type="submit" name="user">Bejelentkezés</button>
          </div>
      </form>
-     </div>
-    </form>
+</form>
+    </div>
+  </div>
+  <div id="overlay"></div>
 <?php
 }
 ?>
