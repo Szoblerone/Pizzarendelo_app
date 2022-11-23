@@ -9,13 +9,13 @@ require("DatabaseParts/Userdata_server_connect.php");
         <button class="more">Kosárba</button>
 </div>*/
     try {
-        $sql = "SELECT pizzaname, description, price, image  FROM pizza";		// eszerű lekérdezés
+        $sql = "SELECT pizzaid, pizzaname, description, price, image  FROM pizza";		// eszerű lekérdezés
         $queryLeker = $conn->prepare($sql);					// előkészített lekérdezés létrehozása
         $queryLeker->execute();								// lekérdezés lefuttatása
         while ($row = $queryLeker->fetch(PDO::FETCH_ASSOC)){	// asszociatív tömbbe olvassuk ki a lekérdezés eredményét soronként
         echo "<div class=product>";
         echo "<img src=".$row["image"].">";
-        echo "<p class=nev data-text=Mindent Bele>".$row["pizzaname"]."</p>";
+        echo "<p class=nev data-text=Mindent Bele>".$row["pizzaid"].". ".$row["pizzaname"]."</p>";
         echo "<span class=leiras>".$row["description"]."</span>";
         echo "<br>";
         echo "<div class=price>".$row["price"]." Ft</div>";

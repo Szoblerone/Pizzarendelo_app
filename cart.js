@@ -13,8 +13,9 @@ function addToCart(event){
 
     
     let itemContainer = document.createElement('tr')
-    let btn = event.target
+
     let btnGrandParent = btn.parentElement.parentElement
+    let btn = event.target
     let btnParent = btn.parentElement
     let itemImage = btnParent.children[0].src
     let itemName = btnParent.children[1].innerText

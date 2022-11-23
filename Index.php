@@ -1,8 +1,11 @@
 <?php 
 session_start();
-$pagename="Főoldal";?>
-<?php require_once("parts/htmlTop.php");?>
-<?php require_once("parts/menu.php");?>
+$pagename="Főoldal";
+require_once("DatabaseParts/User_Login_verification.php");
+require_once("parts/htmlTop.php");
+require_once("parts/menu.php");
+?>
+
 <script src="cart.js" defer></script>
 
 <input type="text" id="search-input" placeholder="Keresés..." class="stickyHeader">
@@ -37,7 +40,7 @@ $pagename="Főoldal";?>
               <td class="uk-text-truncate"><h3></h3></td>
               <td class="uk-text-truncate"><h3></h3></td>
               <td class="uk-text-truncate grand-total"><h3><strong>0 Ft</strong></h3></td>
-              <td class=""><input class="order" type="button" value="Megrendel"></td>
+              <td class=""><input type="button" class="order" value="Megrendel"></td>
               
           </tr>
         </table>

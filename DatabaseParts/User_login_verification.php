@@ -12,8 +12,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     require("DatabaseParts/Userdata_server_connect.php");
     try {
-        $username=$password=$email=$firstname=$lastname=$gender=$birthdate=$zipcode=$city=$street=$phone="";
-        $sql = "SELECT username,email,password,firstname,lastname,gender,birthdate,zipcode,city,street,phone FROM users WHERE username=:username AND password=:password";	// paraméterezett lekérdezés
+        $username=$password=$email=$firstname=$lastname=$gender=$birthdate=$zipcode=$city=$street=$phone=$isadmin="";
+        $sql = "SELECT username,email,password,firstname,lastname,gender,birthdate,zipcode,city,street,phone,IsAdmin FROM users WHERE username=:username AND password=:password";	// paraméterezett lekérdezés
         $queryKeres = $conn->prepare($sql);		// előkészített lekérdezés létrehozása
         $queryKeres->bindParam(":username",$usernamedata,PDO::PARAM_STR);	// paraméterhez érték kötése
         $queryKeres->bindParam(":password",$passworddata,PDO::PARAM_STR);
@@ -30,6 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             $queryKeres->bindColumn("city",$city);
             $queryKeres->bindColumn("street",$street);
             $queryKeres->bindColumn("phone",$phone);
+            $queryKeres->bindColumn("IsAdmin",$isadmin);
             while ($row = $queryKeres->fetch(PDO::FETCH_BOUND)){	// a változókba olvassuk ki az eredményt soronként
             $_SESSION["username"] = $username;
             $_SESSION["password"] = $password;
@@ -42,6 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             $_SESSION["city"] = $city;
             $_SESSION["street"] = $street;
             $_SESSION["phone"] = $phone;
+            $_SESSION["isadmin"]=$isadmin;
             echo "<p>Üdvözöljük kedves ".$firstname." ".$lastname."!</p>";
             }
         }else {

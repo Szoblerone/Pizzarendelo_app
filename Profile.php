@@ -1,9 +1,9 @@
-<?php
+<?php 
 session_start();
 $pagename="Profil";
+require_once("DatabaseParts/User_Login_verification.php");
 require_once("parts/htmlTop.php");
 require_once("parts/menu.php");
-require("DatabaseParts/Userdata_server_connect.php");
 ?>
 <script defer src="script.js"></script>
 <div class="tg-wrap"><table class="tg">

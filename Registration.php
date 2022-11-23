@@ -1,8 +1,10 @@
 <?php 
 session_start();
-$pagename="Regisztráció"; ?>
-<?php require_once("parts/htmlTop.php");?>
-<?php require_once("parts/menu.php");?>
+$pagename="Regisztráció";
+require_once("DatabaseParts/User_Login_verification.php");
+require_once("parts/htmlTop.php");
+require_once("parts/menu.php");
+?>
 <div class="registration-form">
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
         <input type="text" name="username" id="username" placeholder="felhasználónév"><br>
