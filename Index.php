@@ -28,11 +28,11 @@ require_once("parts/menu.php");
                 </tr>
             </thead>
             <tbody>
-
+                    <!-- -----------------Shopping cart Items will be here---------- -->
 
             </tbody>
             <tr>
-              <td><input class="uk-checkbox" type="checkbox"></td>
+             
               <td><img class="uk-preserve-width uk-border-circle"  width="40" alt=""></td>
               <td class="uk-table-link">
                   <h3 class = "item-name"><strong>Végösszeg</strong></h3>
@@ -44,6 +44,6 @@ require_once("parts/menu.php");
               
           </tr>
         </table>
-    </div>
+</div>
    
 <?php require_once("parts/htmlBottom.php");?>

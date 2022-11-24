@@ -14,7 +14,7 @@ function addToCart(event){
     
     let itemContainer = document.createElement('tr')
 
-    let btnGrandParent = btn.parentElement.parentElement
+   
     let btn = event.target
     let btnParent = btn.parentElement
     let itemImage = btnParent.children[0].src
@@ -23,7 +23,7 @@ function addToCart(event){
     
     
     itemContainer.innerHTML = `
-    <td><input class="uk-checkbox" type="checkbox"></td>
+    
     <td><img class="uk-preserve-width uk-border-circle" src=${itemImage} width="40" alt=""></td>
     <td class="uk-table-link">
         <h3 class = "item-name">${itemName}</h3>
