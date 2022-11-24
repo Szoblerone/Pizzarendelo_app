@@ -5,11 +5,11 @@ require("DatabaseParts/Userdata_server_connect.php");
         $queryLeker = $conn->prepare($sql);					// előkészített lekérdezés létrehozása
         $queryLeker->execute();								// lekérdezés lefuttatása
         while ($row = $queryLeker->fetch(PDO::FETCH_ASSOC)){	// asszociatív tömbbe olvassuk ki a lekérdezés eredményét soronként
-        $orderid =$row["orderid"];
+        $orderid = $row["orderid"];
         $userid=$row["user"];
         $pizza = explode(" ", $row["pizzas"]);
         $isReady=$row["ready"];
-        if($isReady==0){
+        if($isReady==1){
         try {
             $firstname=$lastname=$zipcode=$city=$street=$phone="";
             $sql = "SELECT firstname, lastname, zipcode, city, street, phone FROM users WHERE userid=:useridt";		// eszerű lekérdezés
@@ -28,8 +28,11 @@ require("DatabaseParts/Userdata_server_connect.php");
                 echo $orderid."<br>";
                 echo "név: ".$firstname." ".$lastname." cél: ".$zipcode." ".$city." ".$street." telefon: ".$phone."<br>";
             }
+        }else{
+           echo "nincs ilyen felhasználó!";
         }
-        }catch (PDOException $e){
+        }
+        catch (PDOException $e){
             echo "<p class='error'>Adatbázis lekérdezési hiba: ".$e->getMessage()."</p>\n";
         }
         catch (Exception $e){
@@ -54,8 +57,7 @@ require("DatabaseParts/Userdata_server_connect.php");
             echo "<p class='error'>Hiba: ".$e->getMessage()."</p>\n";
         }
         
-        }
-    }
+    }}
 }
     catch (PDOException $e){
         echo "<p class='error'>Adatbázis lekérdezési hiba: ".$e->getMessage()."</p>\n";
