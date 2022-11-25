@@ -12,13 +12,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     require("DatabaseParts/Userdata_server_connect.php");
     try {
-        $username=$password=$email=$firstname=$lastname=$gender=$birthdate=$zipcode=$city=$street=$phone=$isadmin="";
-        $sql = "SELECT username,email,password,firstname,lastname,gender,birthdate,zipcode,city,street,phone,IsAdmin FROM users WHERE username=:username AND password=:password";	// paraméterezett lekérdezés
+        $userid=$username=$password=$email=$firstname=$lastname=$gender=$birthdate=$zipcode=$city=$street=$phone=$isadmin="";
+        $sql = "SELECT userid,username,email,password,firstname,lastname,gender,birthdate,zipcode,city,street,phone,IsAdmin FROM users WHERE username=:username AND password=:password";	// paraméterezett lekérdezés
         $queryKeres = $conn->prepare($sql);		// előkészített lekérdezés létrehozása
         $queryKeres->bindParam(":username",$usernamedata,PDO::PARAM_STR);	// paraméterhez érték kötése
         $queryKeres->bindParam(":password",$passworddata,PDO::PARAM_STR);
         $queryKeres->execute();					// lekérdezés lefuttatása
         if ($queryKeres->rowCount()>=1){		// ha legalább egy soros az eredmény (talált ilyen terméket)
+            $queryKeres->bindColumn("userid",$userid);
             $queryKeres->bindColumn("username",$username);	// az eredmény értékeihez változókat kötünk
             $queryKeres->bindColumn("email",$email);
             $queryKeres->bindColumn("password",$password);
@@ -32,6 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             $queryKeres->bindColumn("phone",$phone);
             $queryKeres->bindColumn("IsAdmin",$isadmin);
             while ($row = $queryKeres->fetch(PDO::FETCH_BOUND)){	// a változókba olvassuk ki az eredményt soronként
+            $_SESSION["userid"] = $userid;
             $_SESSION["username"] = $username;
             $_SESSION["password"] = $password;
             $_SESSION["email"] = $email;

@@ -1,5 +1,6 @@
 <?php 
 session_start();
+$sessionuserid = $_SESSION["userid"];
 $pagename="Profil";
 require_once("DatabaseParts/User_Login_verification.php");
 require_once("parts/htmlTop.php");
@@ -114,6 +115,10 @@ require_once("parts/menu.php");
 </tbody>
 </table></div>
 
+
+
+
 <?php
+require("DatabaseParts/order_history.php");
 require_once("parts/htmlBottom.php");
 ?>
