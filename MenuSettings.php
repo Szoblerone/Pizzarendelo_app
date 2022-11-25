@@ -1,6 +1,6 @@
-<?php 
+<?php
 session_start();
-$pagename="Pizzák kezelése";
+$pagename = "Pizzák kezelése";
 require_once("DatabaseParts/User_Login_verification.php");
 require_once("parts/htmlTop.php");
 require_once("parts/menu.php");

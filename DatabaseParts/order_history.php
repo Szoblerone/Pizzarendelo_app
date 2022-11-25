@@ -21,7 +21,7 @@ require("DatabaseParts/Userdata_server_connect.php");
                 }
             }
             }
-            echo "<button type=submit value=1 >Teljesítve</button></div>";
+            echo "<button type=submit value=1 >Újra rendelés</button></div>";
         }catch (PDOException $e){
             echo "<p class='error'>Adatbázis lekérdezési hiba: ".$e->getMessage()."</p>\n";
         }
