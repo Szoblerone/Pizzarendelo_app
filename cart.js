@@ -23,7 +23,7 @@ function addToCart(event) {
     
     <td><img class="uk-preserve-width uk-border-circle" src=${itemImage} width="40" alt=""></td>
     <td class="uk-table-link">
-        <h3 class = "item-name">${itemName}</h3>
+        <h3 class = "item-name">${itemName}</h3><input type="hidden" name="pizzaId" value="${itemName}">
     </td>
     <td class="uk-text-truncate item-price"><h3>${itemPrice}</h3></td>
     <td><input type = 'number' class = 'num' value = '1'></td>
