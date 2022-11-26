@@ -1,8 +1,10 @@
 <?php 
-   if(isset($_GET["order"])){
-    header("location:Order.php");
-   }
-    
+
+    if (isset($_GET["order"])) {
+        $pizzaid = $_GET["pizzaId"];
+        var_dump($pizzaid);
+    }
+   
 //$pizzaId= ;
 
 //require_once("Userdata_server_connect");
@@ -14,7 +16,6 @@
     $queryMent->execute();
 
 }
-
 
 catch (PDOException $e){
     echo "<p class='error'>Adatbázis mentési hiba: ".$e->getMessage()."</p>\n";

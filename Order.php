@@ -8,16 +8,4 @@
 <h1>Köszönjük a rendelését!</h1>
 <h2>Futárunk nemsokára ott lesz.</h2>
 
-
-
-
-
-
-
-
-
-
-
-
-
 <?php require_once("parts/htmlBottom.php"); ?>

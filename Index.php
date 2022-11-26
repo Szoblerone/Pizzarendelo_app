@@ -57,7 +57,7 @@ require_once("parts/menu.php");
                 <td class="uk-text-truncate grand-total">
                     <h3><strong>0 Ft</strong></h3>
                 </td>
-                <td class=""><input type="submit" class="order" value="Megrendel"></td>
+                <td class=""><input type="submit" name="order" value="Megrendel"></td>
 
             </tr>
         </table>   
