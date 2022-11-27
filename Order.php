@@ -1,8 +1,8 @@
-<?php 
-   session_start();
-   $pagename="Megrendelés";
-   require_once("parts/htmlTop.php");
-   require_once("parts/menu.php");
+<?php
+session_start();
+$pagename = "Megrendelés";
+require_once("parts/htmlTop.php");
+require_once("parts/menu.php");
 ?>
 
 <h1>Köszönjük a rendelését!</h1>

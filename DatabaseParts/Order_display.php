@@ -25,7 +25,7 @@ try {
                     $queryKeres->bindColumn("street", $street);
                     $queryKeres->bindColumn("phone", $phone);
                     while ($row = $queryKeres->fetch(PDO::FETCH_ASSOC)) {
-                        echo "<div class=oderdisplay>";
+                        echo "<div class=oderdisplay >";
                         echo $orderid . "<br>";
                         echo "név: " . $firstname . " " . $lastname . " cél: " . $zipcode . " " . $city . " " . $street . " telefon: " . $phone . "<br>";
                     }
@@ -46,7 +46,7 @@ try {
                         }
                     }
                 }
-                echo "<button type=submit value=1 >Teljesítve</button></div>";
+                echo "<button onclick=Finished(" . $orderid . ")>Teljesítve</button></div>";
             } catch (PDOException $e) {
                 echo "<p class='error'>Adatbázis lekérdezési hiba: " . $e->getMessage() . "</p>\n";
             } catch (Exception $e) {
@@ -61,3 +61,10 @@ try {
     echo "<p class='error'>Hiba: " . $e->getMessage() . "</p>\n";
 }
 ?>
+<script>
+    function Finished(orderid) {
+        const xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "DatabaseParts/Finishing.php?q=" + orderid);
+        xhttp.send();
+    }
+</script>
