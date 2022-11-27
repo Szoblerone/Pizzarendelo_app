@@ -1,82 +1,91 @@
 /*-------------------------- Add a STYLE to the FULLPAGE ------------------------------------------*/
-html,body,head,header,footer{
-    font-family: Tahoma, Verdana, sans-serif;
-    background-color: #fefefe;
-    /*majd ha kész ilyen színű legyen :#343a40*/
-    background-color: #424242;
+html,
+body,
+head,
+header,
+footer {
+  font-family: Tahoma, Verdana, sans-serif;
+  background-color: #fefefe;
+  /*majd ha kész ilyen színű legyen :#343a40*/
+  background-color: #424242;
 }
+
 /*-------------------------- Add a STYLE to the TOP navigation ------------------------------------------*/
 .topnav {
-    border-radius: 8px;
-    background-color: #Ba181b;
-    overflow: hidden;
-  }
-  
-  /* Style the links inside the navigation bar */
-  .topnav a {
-    float: left;
-    color: #ffffff;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    transition-duration: 0.6s;
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    background-color:#212529;
-    color:#ffffff;
-    transition-duration: 0.6s;
-  }
-  
-  /* Add a color to the active/current link */
-  .topnav a.active {
-    background-color:  #212529;
-    color: #ffffff;
-  }
-
-  .kijelentkezes{
-    background-color: #354F52;
-    border: none;
-    color: #e2e6e0;
-    padding: 14px 16px;
-    text-align: center;
-    text-decoration: none;
-    float: right;
-    font-size: 17px;
-    transition-duration: 0.6s;
-  }
-  .kijelentkezes:hover{
-    background-color: #84A98C;
-    border: none;
-    color: #354F52;
-    padding: 14px 16px;
-    text-align: center;
-    text-decoration: none;
-    float: right;
-    font-size: 17px;
-    transition-duration: 0.6s;
-    cursor: pointer;
-  }
-  /*-------------------------- Add a STYLE to the FORM ------------------------------------------*/
-  ::placeholder{
-    color:#ffffff;
-  }
-  input[type=text]{
-    border-radius: 8px;
-    text-align: center;
-    background-color: #727070;
-    color: #ffffff;
-    text-decoration: none;
-    border: none;
-    width: 30%;
-    padding: 10px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    min-width: fit-content;
+  border-radius: 8px;
+  background-color: #Ba181b;
+  overflow: hidden;
 }
-input[type=submit]{
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  transition-duration: 0.6s;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #212529;
+  color: #ffffff;
+  transition-duration: 0.6s;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #212529;
+  color: #ffffff;
+}
+
+.kijelentkezes {
+  background-color: #354F52;
+  border: none;
+  color: #e2e6e0;
+  padding: 14px 16px;
+  text-align: center;
+  text-decoration: none;
+  float: right;
+  font-size: 17px;
+  transition-duration: 0.6s;
+}
+
+.kijelentkezes:hover {
+  background-color: #84A98C;
+  border: none;
+  color: #354F52;
+  padding: 14px 16px;
+  text-align: center;
+  text-decoration: none;
+  float: right;
+  font-size: 17px;
+  transition-duration: 0.6s;
+  cursor: pointer;
+}
+
+/*-------------------------- Add a STYLE to the FORM ------------------------------------------*/
+::placeholder {
+  color: #ffffff;
+}
+
+input[type=text] {
+  border-radius: 8px;
+  text-align: center;
+  background-color: #727070;
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  width: 30%;
+  padding: 10px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  min-width: fit-content;
+}
+
+input[type=submit] {
   border-radius: 8px;
   text-align: center;
   background-color: #343434;
@@ -89,49 +98,16 @@ input[type=submit]{
   margin-bottom: 25px;
   min-width: fit-content;
 }
+
 input[type=submit]:focus {
   background-color: #615f5f;
 }
+
 input[type=submit]:hover {
   background-color: #615f5f;
 }
-input[type=date]{
-  border-radius: 8px;
-  text-align: center;
-  background-color: #727070;
-  color: #ffffff;
-  text-decoration: none;
-  border: none;
-  width: 30%;
-  padding: 10px;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  min-width: fit-content;
-}
-input[type=number]{
-  border-radius: 8px;
-  text-align: center;
-  background-color: #727070;
-  color: #ffffff;
-  text-decoration: none;
-  border: none;
-  width: 30%;
-  padding: 10px;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  min-width: fit-content;
-}
-  input[type=text]:focus {
-  background-color: #615f5f;
-  }
-  input[type=number]:focus {
-  background-color: #615f5f;
-  }
-  input[type=date]:focus {
-  background-color: #615f5f;
-  } 
 
-input[type=password]{
+input[type=date] {
   border-radius: 8px;
   text-align: center;
   background-color: #727070;
@@ -144,10 +120,52 @@ input[type=password]{
   margin-bottom: 25px;
   min-width: fit-content;
 }
+
+input[type=number] {
+  border-radius: 8px;
+  text-align: center;
+  background-color: #727070;
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  width: 30%;
+  padding: 10px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  min-width: fit-content;
+}
+
+input[type=text]:focus {
+  background-color: #615f5f;
+}
+
+input[type=number]:focus {
+  background-color: #615f5f;
+}
+
+input[type=date]:focus {
+  background-color: #615f5f;
+}
+
+input[type=password] {
+  border-radius: 8px;
+  text-align: center;
+  background-color: #727070;
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  width: 30%;
+  padding: 10px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  min-width: fit-content;
+}
+
 input[type=password]:focus {
   background-color: #615f5f;
 }
-input[type=tel]{
+
+input[type=tel] {
   border-radius: 8px;
   text-align: center;
   background-color: #727070;
@@ -160,10 +178,12 @@ input[type=tel]{
   margin-bottom: 25px;
   min-width: fit-content;
 }
+
 input[type=tel]:focus {
   background-color: #615f5f;
 }
-input[type=email]{
+
+input[type=email] {
   border-radius: 8px;
   text-align: center;
   background-color: #727070;
@@ -176,47 +196,26 @@ input[type=email]{
   margin-bottom: 25px;
   min-width: fit-content;
 }
+
 input[type=email]:focus {
   background-color: #615f5f;
 }
 
-  input[type=file]{
-    border-radius: 8px;
-    text-align: center;
-    background-color: #727070;
-    color: #ffffff;
-    text-decoration: none;
-    border: none;
-    width: 30%;
-    padding: 10px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    min-width: fit-content;
+input[type=file] {
+  border-radius: 8px;
+  text-align: center;
+  background-color: #727070;
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  width: 30%;
+  padding: 10px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  min-width: fit-content;
 }
-  input[type=button]{
-    border-radius: 8px;
-    text-align: center;
-    background-color: #727070;
-    color: #ffffff;
-    text-decoration: none;
-    border: none;
-    width: 20%;
-    padding: 10px;
-    margin: 25px;
-    min-width: fit-content;
-    float: right;
-}
-input[type=button]:hover{
-    text-align: center;
-    background-color: #615f5f;
-    color: #ffffff;
-    text-decoration: none;
-    border: none;
-    width: 23%;
-    float: right;
-    min-width: fit-content;
-}
-button{
+
+input[type=button] {
   border-radius: 8px;
   text-align: center;
   background-color: #727070;
@@ -229,7 +228,33 @@ button{
   min-width: fit-content;
   float: right;
 }
-button:hover{
+
+input[type=button]:hover {
+  text-align: center;
+  background-color: #615f5f;
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  width: 23%;
+  float: right;
+  min-width: fit-content;
+}
+
+button {
+  border-radius: 8px;
+  text-align: center;
+  background-color: #727070;
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  width: 20%;
+  padding: 10px;
+  margin: 25px;
+  min-width: fit-content;
+  float: right;
+}
+
+button:hover {
   text-align: center;
   background-color: #615f5f;
   color: #ffffff;
@@ -239,146 +264,163 @@ button:hover{
   float: right;
   min-width: fit-content;
 }
-.uploadbox{
+
+.uploadbox {
   margin: auto;
   max-width: 40%;
 }
-.uploadbox p{
+
+.uploadbox p {
   text-align: center;
   color: #e2e6e0;
 }
-a{
+
+a {
   text-decoration: underline;
   color: #e2e6e0;
 }
-.labelforcheckbox{
+
+.labelforcheckbox {
   text-decoration: none;
   color: #e2e6e0;
 }
 
-  /*-------------------------- Add a STYLE to the STICKY HEADER ------------------------------------------*/
-.stickyHeader{
+/*-------------------------- Add a STYLE to the STICKY HEADER ------------------------------------------*/
+.stickyHeader {
   color: #e2e6e0;
   background-color: #354F52;
   text-align: center;
   border-radius: 8px;
   padding: 20px;
   margin-top: 20px;
- font-size: x-large;
- box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-size: x-large;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 /* The sticky class is added to the header with JS when it reaches its scroll position */
 .sticky {
   position: fixed;
   top: 0;
   width: 100%
 }
-.nomargin{
+
+.nomargin {
   margin-top: 0px;
 }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
+.sticky+.content {
   padding-top: 10px;
 }
+
 /*-------------------------- Add a STYLE to the SEARCH-BAR ------------------------------------------*/
-.search-bar{
+.search-bar {
   padding: 14px 16px;
   margin-top: 30px;
   margin-bottom: 30px;
   background-color: #354F52;
   border-radius: 8px;
 }
+
 /*------------------------------------------ Pizza index divs -------------------*/
-#content{
-	display:grid;
-    grid-template-columns: repeat(3, 1fr);
+#content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5);
+  grid-gap: auto;
+  margin: auto;
+  border: none;
+  background-color: none;
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 1300px) {
+  #content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(5);
     grid-gap: auto;
-	margin: auto;
-	border: none;
-	background-color: none;
-	max-width: 100%;
-}
-@media only screen and (max-width: 1300px) {
-    #content{
-        display:grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(5);
-        grid-gap: auto;
-        margin: auto;
-        border: none;
-        background-color: none;
-        max-width: 100%;
-    }
-  }
-  @media only screen and (max-width: 800px) {
-    #content{
-        display:grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(5);
-        grid-gap: auto;
-        margin: left 50px;
-        border: none;
-        background-color: none;
-        max-width: 100%;
-    }
-  }
-.product{
-	background-color: #d0dbcb;
-	color: #000;
-	border: solid 1px;
-    border-color: #354F52;
-	border-radius: 5px;
-    /*korábban 200px volt a szélesség*/
-	max-width: 400px;
-	max-height: 500px;
-	margin-bottom: 25px;
-	margin-top: 25px;
-	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 10px;
-}
-.product img{
-    max-width: 400px;
-    max-height: 500px;
-    border-radius: 10px;
-}
-.product p{
-	font-size: 20px;
-	text-align: center;
-    color: #000;
-}
-.leiras{
-    font-size: 20px;
-	text-align: center;
-    color: #000;
-}
-.more{
-    background-color: #727070;
-    color: #ffffff;
+    margin: auto;
     border: none;
-    padding: 14px 16px;
-    text-align: center;
-    text-decoration: none;
-    float: right;
-    font-size: 17px;
-    transition-duration: 0.6s;
-    border-radius: 10px;
+    background-color: none;
+    max-width: 100%;
   }
-.more:hover{
-    background-color: #615f5f;
-    color: #ffffff;
+}
+
+@media only screen and (max-width: 800px) {
+  #content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5);
+    grid-gap: auto;
+    margin: left 50px;
     border: none;
-    padding: 14px 16px;
-    text-align: center;
-    text-decoration: none;
-    float: right;
-    font-size: 17px;
-    transition-duration: 0.6s;
-    cursor: pointer;
-    border-radius: 10px;
+    background-color: none;
+    max-width: 100%;
   }
-.price{
+}
+
+.product {
+  background-color: #d0dbcb;
+  color: #000;
+  border: solid 1px;
+  border-color: #354F52;
+  border-radius: 5px;
+  /*korábban 200px volt a szélesség*/
+  max-width: 400px;
+  max-height: 500px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+}
+
+.product img {
+  max-width: 400px;
+  max-height: 500px;
+  border-radius: 10px;
+}
+
+.product p {
+  font-size: 20px;
+  text-align: center;
+  color: #000;
+}
+
+.leiras {
+  font-size: 20px;
+  text-align: center;
+  color: #000;
+}
+
+.more {
+  background-color: #727070;
+  color: #ffffff;
+  border: none;
+  padding: 14px 16px;
+  text-align: center;
+  text-decoration: none;
+  float: right;
+  font-size: 17px;
+  transition-duration: 0.6s;
+  border-radius: 10px;
+}
+
+.more:hover {
+  background-color: #615f5f;
+  color: #ffffff;
+  border: none;
+  padding: 14px 16px;
+  text-align: center;
+  text-decoration: none;
+  float: right;
+  font-size: 17px;
+  transition-duration: 0.6s;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.price {
   font-size: 30px;
   border: none;
   padding: 30px;
@@ -386,18 +428,77 @@ a{
   text-decoration: none;
   float: left;
 }
+
 /*---------------------------------TABLE FOR PROFILE-------------------------------------------------------*/
-.tg  {border-collapse:collapse;border-color:#C44D58;border-spacing:0;margin:50px auto;}
-.tg td{background-color:#F9CDAD;border-color:#C44D58;border-style:solid;border-width:0px;color:#002b36;
-  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{background-color:#FE4365;border-color:#C44D58;border-style:solid;border-width:0px;color:#fdf6e3;
-  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
-.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
-.tg .tg-0lax{text-align:left;vertical-align:top}
-@media screen and (max-width: 767px) {.tg {width: auto !important;}.tg col {width: auto !important;}.tg-wrap {overflow-x: auto;-webkit-overflow-scrolling: touch;margin: auto 0px;}}
+.tg {
+  border-collapse: collapse;
+  border-color: #C44D58;
+  border-spacing: 0;
+  margin: 50px auto;
+}
+
+.tg td {
+  background-color: #F9CDAD;
+  border-color: #C44D58;
+  border-style: solid;
+  border-width: 0px;
+  color: #002b36;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+
+.tg th {
+  background-color: #FE4365;
+  border-color: #C44D58;
+  border-style: solid;
+  border-width: 0px;
+  color: #fdf6e3;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  overflow: hidden;
+  padding: 10px 5px;
+  word-break: normal;
+}
+
+.tg .tg-c3ow {
+  border-color: inherit;
+  text-align: center;
+  vertical-align: top
+}
+
+.tg .tg-0pky {
+  border-color: inherit;
+  text-align: left;
+  vertical-align: top
+}
+
+.tg .tg-0lax {
+  text-align: left;
+  vertical-align: top
+}
+
+@media screen and (max-width: 767px) {
+  .tg {
+    width: auto !important;
+  }
+
+  .tg col {
+    width: auto !important;
+  }
+
+  .tg-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: auto 0px;
+  }
+}
+
 /*-------------------------------------Modal for settings-------------------------------------------*/
-.change{
+.change {
   padding: 0px;
   margin: 0px;
   border-radius: 0px;
@@ -407,18 +508,20 @@ a{
 
 /*-------------------------------Style for cart items-------------------------------------------------------*/
 
-#cart-table th{
+#cart-table th {
   padding-left: 50;
 }
 
 
-.registration-form{
+.registration-form {
   max-width: 64em;
   margin: auto;
   text-align: center;
 }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
@@ -482,4 +585,3 @@ a{
   opacity: 1;
   pointer-events: all;
 }
-
