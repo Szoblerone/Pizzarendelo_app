@@ -57,7 +57,11 @@ require_once("parts/menu.php");
                 <td class="uk-text-truncate grand-total">
                     <h3><strong>0 Ft</strong></h3>
                 </td>
+<<<<<<< Updated upstream
                 <td class=""><input type="submit" name="order" value="Megrendel"></td>
+=======
+                <td class=""><input type="submit" name="order" value="Megrendel" onclick="alertFunction()"></td>
+>>>>>>> Stashed changes
 
             </tr>
         </table>   

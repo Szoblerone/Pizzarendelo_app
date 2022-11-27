@@ -17,13 +17,14 @@ function addToCart(event) {
     let btnParent = btn.parentElement
     let itemImage = btnParent.children[0].src
     let itemName = btnParent.children[1].innerText
-    let itemPrice = btnParent.children[4].innerText
+    let itemPrice = btnParent.children[5].innerText
+    let itemId = btnParent.children[2].innerText
 
     itemContainer.innerHTML = `
     
     <td><img class="uk-preserve-width uk-border-circle" src=${itemImage} width="40" alt=""></td>
     <td class="uk-table-link">
-        <h3 class = "item-name">${itemName}</h3><input type="hidden" name="pizzaId" value="${itemName}">
+        <h3 class = "item-name">${itemName}</h3><input type="hidden" name="pizzaId[]" value="${itemId}">
     </td>
     <td class="uk-text-truncate item-price"><h3>${itemPrice}</h3></td>
     <td><input type = 'number' class = 'num' value = '1'></td>
