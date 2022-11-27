@@ -25,7 +25,7 @@ require_once("parts/menu.php");
                     <th class="uk-table-small sty">
                         <h3>Pizza</h3>
                     </th>
-                    <th class="uk-table-small"></th>
+                   
                     <th class="uk-width-small sty">
                         <h3>Ár</h3>
                     </th>
@@ -35,6 +35,7 @@ require_once("parts/menu.php");
                     <th class="uk-table-shrink uk-text-small sty">
                         <h3>Összesen</h3>
                     </th>
+                    
 
                 </tr>
             </thead>
@@ -57,11 +58,7 @@ require_once("parts/menu.php");
                 <td class="uk-text-truncate grand-total">
                     <h3><strong>0 Ft</strong></h3>
                 </td>
-<<<<<<< Updated upstream
-                <td class=""><input type="submit" name="order" value="Megrendel"></td>
-=======
                 <td class=""><input type="submit" name="order" value="Megrendel" onclick="alertFunction()"></td>
->>>>>>> Stashed changes
 
             </tr>
         </table>   

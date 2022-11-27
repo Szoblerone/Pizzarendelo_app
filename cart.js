@@ -21,8 +21,7 @@ function addToCart(event) {
     let itemId = btnParent.children[2].innerText
 
     itemContainer.innerHTML = `
-    
-    <td><img class="uk-preserve-width uk-border-circle" src=${itemImage} width="40" alt=""></td>
+    <td></td>
     <td class="uk-table-link">
         <h3 class = "item-name">${itemName}</h3><input type="hidden" name="pizzaId[]" value="${itemId}">
     </td>

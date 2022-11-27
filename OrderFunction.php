@@ -1,13 +1,3 @@
-<<<<<<< Updated upstream
-<?php 
-
-    if (isset($_GET["order"])) {
-        $pizzaid = $_GET["pizzaId"];
-        var_dump($pizzaid);
-    }
-   
-//$pizzaId= ;
-=======
 <?php
 if (isset($_SESSION["userid"])) {
     $accountId = $_SESSION["userid"];
@@ -15,7 +5,6 @@ if (isset($_SESSION["userid"])) {
         
         $pizzaId = $_GET["pizzaId"];
         $pizzas = implode(' ', $pizzaId);
->>>>>>> Stashed changes
 
         require_once("DatabaseParts/Userdata_server_connect.php");
         try {
@@ -40,18 +29,6 @@ if (isset($_SESSION["userid"])) {
         </script>';
 }
 
-<<<<<<< Updated upstream
-catch (PDOException $e){
-    echo "<p class='error'>Adatbázis mentési hiba: ".$e->getMessage()."</p>\n";
-}
-catch (Exception $e){
-    echo "<p class='error'>Hiba: ".$e->getMessage()."</p>\n";
-}
-*/
-=======
 
-
-
->>>>>>> Stashed changes
 
 ?>

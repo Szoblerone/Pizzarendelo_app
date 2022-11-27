@@ -508,11 +508,18 @@ a {
 
 /*-------------------------------Style for cart items-------------------------------------------------------*/
 
-#cart-table th {
-  padding-left: 50;
+#cart-div {
+  background-color: #d0dbcb;
+  width: 90%;
+  margin-left: 5%;
+}
+
+#cart-table tbody tr td {
+  padding-left: 40px;
 }
 
 
+/*---------------------------------------Style for MODAL items-------------------------*/
 .registration-form {
   max-width: 64em;
   margin: auto;
@@ -584,4 +591,12 @@ a {
 #overlay.active {
   opacity: 1;
   pointer-events: all;
+}
+h1 {
+  text-align: center;
+  color: #e2e6e0;
+}
+h2{
+text-align: center;
+color: #e2e6e0;
 }

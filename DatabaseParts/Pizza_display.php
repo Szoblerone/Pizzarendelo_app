@@ -14,16 +14,10 @@ try {
     $queryLeker->execute(); // lekérdezés lefuttatása
     while ($row = $queryLeker->fetch(PDO::FETCH_ASSOC)) { // asszociatív tömbbe olvassuk ki a lekérdezés eredményét soronként
         echo "<div class=product>";
-<<<<<<< Updated upstream
-        echo "<img src=" . $row["image"] . ">";
-        echo "<p class=nev data-text=Mindent Bele>" . $row["pizzaid"] . ". " . $row["pizzaname"] . "</p>";
-        echo "<span class=leiras>" . $row["description"] . "</span>";
-=======
         echo "<img src=".$row["image"].">";
         echo "<p class=nev data-text=Mindent Bele>".$row["pizzaid"].". ".$row["pizzaname"]."</p>";
         echo "<p hidden>".$row["pizzaid"]."</p>";
         echo "<span class=leiras>".$row["description"]."</span>";
->>>>>>> Stashed changes
         echo "<br>";
         echo "<div class=price>" . $row["price"] . " Ft</div>";
         echo "<button class=more>Kosárba</button>";
